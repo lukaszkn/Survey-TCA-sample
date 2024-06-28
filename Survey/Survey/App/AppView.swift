@@ -15,7 +15,7 @@ struct AppView: View {
         NavigationStack {
             MainView(store: store.scope(state: \.mainViewState, action: \.mainView))
             .navigationDestination(item: $store.scope(state: \.destination?.surveyQuestions, action: \.destination.surveyQuestions)) { store in
-                SurveyQuestionView(store: store)
+                SurveyQuestionsView(store: store)
             }
             .onAppear() {
                 store.send(.mainView(.initMainView)) // initialise MainViewFeature reducer
