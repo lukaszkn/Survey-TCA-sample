@@ -7,6 +7,7 @@
 
 import ComposableArchitecture
 import SwiftUI
+import SwiftMessages
 
 struct SurveyQuestionsView: View {
     @Bindable var store: StoreOf<SurveyQuestionsFeature>
@@ -21,7 +22,7 @@ struct SurveyQuestionsView: View {
                 
             VStack {
                 Form {
-                    Text("Question text").font(.headline)
+                    Text("What is your favourite colour?").font(.headline)
                     TextField("", text: $store.answerText, prompt: Text("Type your answer here"))
                 }
                 .frame(height: 140)
@@ -40,7 +41,6 @@ struct SurveyQuestionsView: View {
             }
             .frame(maxWidth: .infinity)
             .background(Color(.systemGroupedBackground))
-            
         }
         .navigationTitle("Question \(store.currentQuestionIndex + 1)/\(store.questions.count)")
         .toolbarRole(.editor)
@@ -56,9 +56,25 @@ struct SurveyQuestionsView: View {
             }
             .disabled(store.currentQuestionIndex == store.questions.count - 1)
         }
+        .onChange(of: store.isShowingSuccessMessage, {
+            let messageView = MessageHostingView(id: UUID().uuidString, content: SuccessDialogMessageView())
+            SwiftMessages.show(view: messageView)
+        })
+        .onChange(of: store.isShowingFailureMessage, { oldValue, newValue in
+            let messageView = MessageHostingView(id: UUID().uuidString, content: FailureDialogMessageView() {
+                Button("Retry") {
+                }
+                .buttonStyle(.borderedProminent)
+            })
+            
+            var config = SwiftMessages.Config()
+            config.duration = .forever
+            SwiftMessages.show(config: config, view: messageView)
+        })
         .onAppear() {
             store.send(.fetchQuestions)
         }
+        
     }
 }
 

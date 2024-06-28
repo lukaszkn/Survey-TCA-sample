@@ -14,6 +14,9 @@ struct SurveyQuestionsFeature {
     @ObservableState
     struct State: Equatable {
         var isLoading: Bool = false
+        var isShowingSuccessMessage: Bool = false
+        var isShowingFailureMessage: Bool = false
+        
         var questions: [Question] = []
         var currentQuestionIndex: Int = 0
         

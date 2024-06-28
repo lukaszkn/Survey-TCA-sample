@@ -22,6 +22,8 @@
 		B29FC9782C2DFD48002A94A5 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FC9772C2DFD48002A94A5 /* AppView.swift */; };
 		B29FC97D2C2E9725002A94A5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FC97C2C2E9725002A94A5 /* Question.swift */; };
 		B29FC9802C2EA1C9002A94A5 /* SurveyQuestionsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FC97F2C2EA1C9002A94A5 /* SurveyQuestionsAPIService.swift */; };
+		B29FC9862C2EDB3B002A94A5 /* SuccessDialogMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FC9852C2EDB3B002A94A5 /* SuccessDialogMessageView.swift */; };
+		B29FC9882C2EDFEE002A94A5 /* FailureDialogMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FC9872C2EDFEE002A94A5 /* FailureDialogMessageView.swift */; };
 		B2EDCD2F2C2DD5240048695C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EDCD2E2C2DD5240048695C /* AppFeature.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		B29FC9772C2DFD48002A94A5 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		B29FC97C2C2E9725002A94A5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B29FC97F2C2EA1C9002A94A5 /* SurveyQuestionsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestionsAPIService.swift; sourceTree = "<group>"; };
+		B29FC9852C2EDB3B002A94A5 /* SuccessDialogMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessDialogMessageView.swift; sourceTree = "<group>"; };
+		B29FC9872C2EDFEE002A94A5 /* FailureDialogMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailureDialogMessageView.swift; sourceTree = "<group>"; };
 		B2EDCD2E2C2DD5240048695C /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,6 +187,7 @@
 		B29FC9722C2DFCB7002A94A5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				B29FC9812C2ED50D002A94A5 /* CustomViews */,
 				B29FC96D2C2DFCB7002A94A5 /* MainViewFeature */,
 				B29FC97B2C2E9553002A94A5 /* Model */,
 				B29FC97E2C2E9B50002A94A5 /* Service */,
@@ -221,6 +226,15 @@
 				B29FC97F2C2EA1C9002A94A5 /* SurveyQuestionsAPIService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		B29FC9812C2ED50D002A94A5 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				B29FC9852C2EDB3B002A94A5 /* SuccessDialogMessageView.swift */,
+				B29FC9872C2EDFEE002A94A5 /* FailureDialogMessageView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		B2EDCD2D2C2DD3F80048695C /* App */ = {
@@ -374,8 +388,10 @@
 				B29FC9802C2EA1C9002A94A5 /* SurveyQuestionsAPIService.swift in Sources */,
 				B29FC97D2C2E9725002A94A5 /* Question.swift in Sources */,
 				B29FC9752C2DFCB7002A94A5 /* SurveyQuestionsFeature.swift in Sources */,
+				B29FC9862C2EDB3B002A94A5 /* SuccessDialogMessageView.swift in Sources */,
 				B29FC9732C2DFCB7002A94A5 /* MainViewFeature.swift in Sources */,
 				B29FC9782C2DFD48002A94A5 /* AppView.swift in Sources */,
+				B29FC9882C2EDFEE002A94A5 /* FailureDialogMessageView.swift in Sources */,
 				B29FC9742C2DFCB7002A94A5 /* MainView.swift in Sources */,
 				B2EDCD2F2C2DD5240048695C /* AppFeature.swift in Sources */,
 				B207FA6B2C2D93FB00A3D693 /* SurveyApp.swift in Sources */,
