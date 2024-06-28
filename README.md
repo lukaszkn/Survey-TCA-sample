@@ -7,8 +7,8 @@ Upon submission of the question answer, notification banner is shown.
 The app connects to the rest api to get the list of questions.
 
 <br>
-<img src="screenshots/app1.png" width="350">&nbsp;
-<img src="screenshots/app2.png" width="350"><br>
+<img src="screenshots/app1.png" width="300">&nbsp;
+<img src="screenshots/app2.png" width="300"><br>
 <br>
-<img src="screenshots/app3.png" width="350">&nbsp;
-<img src="screenshots/app4.png" width="350"><br>
+<img src="screenshots/app3.png" width="300">&nbsp;
+<img src="screenshots/app4.png" width="300"><br>

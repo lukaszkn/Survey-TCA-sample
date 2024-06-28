@@ -4,11 +4,12 @@
 //
 //  Created by Lukasz on 28/06/2024.
 //
+//  Question model with identifier and question text
 
-import Foundation
-
-struct Question: Codable {
+struct Question: Codable, Equatable {
+    /// Question identifier
     let id: Int
+    /// Question text
     let question: String
 }
 

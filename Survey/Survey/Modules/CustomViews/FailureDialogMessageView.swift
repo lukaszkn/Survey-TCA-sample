@@ -4,15 +4,18 @@
 //
 //  Created by Lukasz on 28/06/2024.
 //
+//  This is failure dialog which shown after answer submission has failed
 
 import SwiftUI
 
 struct FailureDialogMessageView<Button>: View where Button: View  {
+    /// Button to show on notification banner, in this case Retry button
     @ViewBuilder let button: () -> Button
     
     var body: some View {
         VStack() {
             HStack {
+                /// Indicate failure also with image
                 Image(systemName: "checkmark.circle.badge.xmark.fill")
                     .resizable()
                     .frame(width: 35, height: 30)
@@ -42,6 +45,7 @@ struct FailureDialogMessageView<Button>: View where Button: View  {
 #Preview {
     FailureDialogMessageView() {
         Button("Retry") {
+            print("Retry button has been pressed")
         }
         .buttonStyle(.borderedProminent)
     }

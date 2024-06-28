@@ -4,6 +4,7 @@
 //
 //  Created by Lukasz on 27/06/2024.
 //
+//  This is main app view which hold master/details views for navigation
 
 import ComposableArchitecture
 import SwiftUI
