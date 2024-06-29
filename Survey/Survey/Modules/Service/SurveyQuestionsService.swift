@@ -10,33 +10,52 @@
 import ComposableArchitecture
 import Foundation
 
-struct SurveyQuestionsAPIService {
+struct SurveyQuestionsService {
+    /// Fetch question list
     var fetchQuestions: () async throws -> [Question]
     
+    /// Submit question answer
     var submitAnswer: (Answer) async throws -> Void
 }
 
-extension SurveyQuestionsAPIService: DependencyKey {
+extension SurveyQuestionsService: DependencyKey {
     /// This is for live API environment
-    static var liveValue: SurveyQuestionsAPIService = Self {
+    static var liveValue: SurveyQuestionsService = Self {
         let questions: [Question] = try await request(url: "https://xm-assignment.web.app/questions")
         return questions
     } submitAnswer: { answer in
         try await post(url: "https://xm-assignment.web.app/question/submit", data: answer)
     }
 
+    /// Test/unimplemented service
+    static var testValue: SurveyQuestionsService = Self(
+        fetchQuestions: { throw APIError.invalidUrl },
+        submitAnswer: XCTUnimplemented("SurveyQuestionsService.submitAnswer")
+    )
+    
+    static var previewValue: SurveyQuestionsService = Self(
+        fetchQuestions: {
+            [
+                Question(id: 1, question: "Question 1"),
+                Question(id: 2, question: "Question 2"),
+                Question(id: 3, question: "Question 3")
+            ]
+        },
+        submitAnswer: { answer in
+        }
+    )
 }
 
 extension DependencyValues {
-    var surveyQuestionsAPIService: SurveyQuestionsAPIService {
-        get { self[SurveyQuestionsAPIService.self] }
+    var surveyQuestionsAPIService: SurveyQuestionsService {
+        get { self[SurveyQuestionsService.self] }
         set {
-            self[SurveyQuestionsAPIService.self] = newValue
+            self[SurveyQuestionsService.self] = newValue
         }
     }
 }
 
-extension SurveyQuestionsAPIService {
+extension SurveyQuestionsService {
     private static func request<T: Decodable>(url: String) async throws -> T {
         guard let linkURL = URL(string: url) else {
             throw APIError.invalidUrl

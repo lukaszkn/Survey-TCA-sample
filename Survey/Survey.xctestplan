@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "4DF1158B-81B2-4C1A-BA19-49853333B2DD",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Survey.xcodeproj",
+      "identifier" : "B207FA662C2D93FB00A3D693",
+      "name" : "Survey"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Survey.xcodeproj",
+        "identifier" : "B207FA762C2D93FC00A3D693",
+        "name" : "SurveyTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Survey.xcodeproj",
+        "identifier" : "B207FA802C2D93FC00A3D693",
+        "name" : "SurveyUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

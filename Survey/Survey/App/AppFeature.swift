@@ -23,7 +23,6 @@ struct AppFeature {
     @ObservableState
     struct State: Equatable {
         var mainViewState = MainViewFeature.State()
-        var surveyQuestionState: SurveyQuestionsFeature.State?
         
         @Presents var destination: Destination.State?
     }
@@ -41,8 +40,7 @@ struct AppFeature {
             switch action {
             /// Handle master/details navigation here
             case .mainView(.startButtonTapped):
-                state.surveyQuestionState = SurveyQuestionsFeature.State()
-                state.destination = .surveyQuestions(state.surveyQuestionState!) // set navigation destination to survey questions
+                state.destination = .surveyQuestions(SurveyQuestionsFeature.State()) // set navigation destination to survey questions
                 return .none
                 
             default:

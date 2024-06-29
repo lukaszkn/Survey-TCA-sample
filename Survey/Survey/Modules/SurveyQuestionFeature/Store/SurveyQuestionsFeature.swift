@@ -1,5 +1,5 @@
 //
-//  SurveyQuestionFeature.swift
+//  SurveyQuestionsFeature.swift
 //  Survey
 //
 //  Created by Lukasz on 27/06/2024.
@@ -45,7 +45,9 @@ struct SurveyQuestionsFeature {
         }
         
         static func == (lhs: SurveyQuestionsFeature.State, rhs: SurveyQuestionsFeature.State) -> Bool {
-            lhs.isPerformingNetworkCall == rhs.isPerformingNetworkCall && lhs.questions.count == rhs.questions.count
+            lhs.isPerformingNetworkCall == rhs.isPerformingNetworkCall && lhs.isShowingSuccessMessage == rhs.isShowingSuccessMessage && lhs.isShowingFailureMessage == rhs.isShowingFailureMessage
+                && lhs.questions.count == rhs.questions.count && lhs.answersSubmitted.count == rhs.answersSubmitted.count
+                && lhs.currentQuestionIndex == rhs.currentQuestionIndex
         }
     }
     
