@@ -93,13 +93,17 @@ struct SurveyQuestionsFeature {
                 return .none
                 
             /// This is run when previous button is tapped
-            case .previousButtonTapped: //
-                state.currentQuestionIndex -= 1
+            case .previousButtonTapped:
+                if state.currentQuestionIndex > 0 {
+                    state.currentQuestionIndex -= 1
+                }
                 return .none
             
             /// This is run when next button is tapped
             case .nextButtonTapped:
-                state.currentQuestionIndex += 1
+                if state.currentQuestionIndex < state.questions.count - 1 {
+                    state.currentQuestionIndex += 1
+                }
                 return .none
                 
             /// Show progress view to indicate upload and start the process

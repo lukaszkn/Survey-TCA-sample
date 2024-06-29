@@ -17,6 +17,7 @@
 		B207FA992C2D965800A3D693 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = B207FA982C2D965800A3D693 /* SwiftMessages */; };
 		B266DDA92C303AD600C0AE1C /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266DDA82C303AD600C0AE1C /* ServiceTests.swift */; };
 		B266DDAB2C30654000C0AE1C /* SurveyQuestionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266DDAA2C30654000C0AE1C /* SurveyQuestionsUITests.swift */; };
+		B266DDAD2C30733100C0AE1C /* SurveyQuestionsFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B266DDAC2C30733100C0AE1C /* SurveyQuestionsFeatureTests.swift */; };
 		B29FC9732C2DFCB7002A94A5 /* MainViewFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FC96A2C2DFCB7002A94A5 /* MainViewFeature.swift */; };
 		B29FC9742C2DFCB7002A94A5 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FC96C2C2DFCB7002A94A5 /* MainView.swift */; };
 		B29FC9752C2DFCB7002A94A5 /* SurveyQuestionsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29FC96E2C2DFCB7002A94A5 /* SurveyQuestionsFeature.swift */; };
@@ -61,6 +62,7 @@
 		B266DDA72C3004B300C0AE1C /* Survey.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Survey.xctestplan; sourceTree = "<group>"; };
 		B266DDA82C303AD600C0AE1C /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		B266DDAA2C30654000C0AE1C /* SurveyQuestionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestionsUITests.swift; sourceTree = "<group>"; };
+		B266DDAC2C30733100C0AE1C /* SurveyQuestionsFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyQuestionsFeatureTests.swift; sourceTree = "<group>"; };
 		B29FC96A2C2DFCB7002A94A5 /* MainViewFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewFeature.swift; sourceTree = "<group>"; };
 		B29FC96C2C2DFCB7002A94A5 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B29FC96E2C2DFCB7002A94A5 /* SurveyQuestionsFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyQuestionsFeature.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				B207FA7B2C2D93FC00A3D693 /* AppFeatureTests.swift */,
 				B266DDA82C303AD600C0AE1C /* ServiceTests.swift */,
+				B266DDAC2C30733100C0AE1C /* SurveyQuestionsFeatureTests.swift */,
 			);
 			path = SurveyTests;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B207FA7C2C2D93FC00A3D693 /* AppFeatureTests.swift in Sources */,
+				B266DDAD2C30733100C0AE1C /* SurveyQuestionsFeatureTests.swift in Sources */,
 				B266DDA92C303AD600C0AE1C /* ServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

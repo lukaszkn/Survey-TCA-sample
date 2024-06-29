@@ -28,8 +28,8 @@ Jump to
 
 <table style="border-collapse: collapse; ">
 <tr>
-<td style="vertical-align: top; width: 310px">
-<img src="screenshots/project_structure.png" width="300">
+<td style="vertical-align: top;">
+<img src="screenshots/project_structure.png" width="370">
 </td>
 <td style="vertical-align: top;">
 Project has 2 main groups: App and Modules.<br>
@@ -46,6 +46,20 @@ Look inside the code for particular file comment.
 
 
 ## Tests
+
+<table style="border-collapse: collapse; ">
+<tr>
+<td style="vertical-align: top;">
+<img src="screenshots/tests.png" width="370">
+</td>
+<td style="vertical-align: top;">
+Project contains unit tests for futures/reducers and also for api service live/mock.<br>
+<br>
+UI tests are also provided.
+</td>
+</tr>
+</table>
+
 [back to top](#readme)
 
 ## Future work

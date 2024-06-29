@@ -79,14 +79,5 @@ final class ServiceTests: XCTestCase {
             XCTAssert(!error.localizedDescription.isEmpty)
         }
     }
-    
-    func testExample2() async {
-//        let store = TestStore(initialState: SurveyQuestionsFeature.State()) {
-//            SurveyQuestionsFeature()
-//        } withDependencies: { //inout DependencyValues in
-//            $0.surveyQuestionsAPIService = .previewValue
-//        }
-        
-        let expected = try! await SurveyQuestionsService.previewValue.fetchQuestions()
-    }
+
 }

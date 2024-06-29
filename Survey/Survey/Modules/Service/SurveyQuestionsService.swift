@@ -30,7 +30,9 @@ extension SurveyQuestionsService: DependencyKey {
     /// Test/unimplemented service
     static var testValue: SurveyQuestionsService = Self(
         fetchQuestions: { throw APIError.invalidUrl },
-        submitAnswer: XCTUnimplemented("SurveyQuestionsService.submitAnswer")
+        submitAnswer: { answer in
+            throw APIError.uploadFailed
+        }
     )
     
     static var previewValue: SurveyQuestionsService = Self(
